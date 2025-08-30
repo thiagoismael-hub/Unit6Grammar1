@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Grammar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-zero {
+            background-color: #d8f3fd;
+        }
+        .text-zero {
+            color: #17a2b8;
+        }
+        .bg-first {
+            background-color: #f7e4c4;
+        }
+        .text-first {
+            color: #d99000;
+        }
+        .bg-second {
+            background-color: #e6e6fa;
+        }
+        .text-second {
+            color: #8a2be2;
+        }
+        .highlight {
+            font-weight: 700;
+        }
+        .active-link {
+            font-weight: 700;
+            border-bottom: 2px solid;
+        }
+    </style>
+</head>
+<body class="bg-zero min-h-screen transition-colors duration-500">
+
+    <div class="p-6 md:p-12">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-800 mb-2">Conditional Grammar 🧠</h1>
+            <p class="text-md md:text-xl text-gray-600">Understand the difference between the Zero, First, and Second Conditional.</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="flex justify-center space-x-4 mb-10 text-lg font-semibold">
+            <button onclick="showPage('zero')" id="link-zero" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">
+                Zero Conditional
+            </button>
+            <button onclick="showPage('first')" id="link-first" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">
+                First Conditional
+            </button>
+            <button onclick="showPage('second')" id="link-second" class="text-gray-600 hover:text-gray-800 transition-colors duration-300">
+                Second Conditional
+            </button>
+        </nav>
+
+        <!-- Zero Conditional Page -->
+        <div id="page-zero" class="page bg-white p-6 md:p-10 rounded-3xl shadow-lg transition-all duration-500">
+            <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-zero mb-4">Zero Conditional 🟢 (Facts and universal truths)</h2>
+                    <p class="text-gray-700 mb-6">We use the zero conditional to talk about scientific facts, habits, and things that are always true. The structure is simple and direct because the outcome is guaranteed.</p>
+                    <h3 class="text-2xl font-bold text-zero mb-4">Structure:</h3>
+                    <p class="text-xl font-mono p-4 bg-gray-100 rounded-lg mb-6">If + Present Simple, Present Simple</p>
+                    <div id="examples-zero" class="space-y-4">
+                        <p class="text-lg text-gray-800 opacity-0 transition-opacity duration-500">
+                            1. If you <span class="highlight">heat</span> ice, it <span class="highlight">melts</span>. 🧊
+                        </p>
+                        <p class="text-lg text-gray-800 opacity-0 transition-opacity duration-500">
+                            2. If you <span class="highlight">don't water</span> plants, they <span class="highlight">die</span>. 🌿
+                        </p>
+                        <p class="text-lg text-gray-800 opacity-0 transition-opacity duration-500">
+                            3. If you <span class="highlight">mix</span> blue and yellow, you <span class="highlight">get</span> green. 🎨
+                        </p>
+                    </div>
+                    <button id="button-zero" onclick="showNextExample('zero')" class="mt-8 bg-zero text-white font-semibold py-2 px-6 rounded-full shadow-md hover:bg-opacity-80 transition-all duration-300">
+                        Show Next Example
+                    </button>
+                </div>
+                <div class="md:w-1/2 flex justify-center items-center">
+                    <img src="https://placehold.co/400x300/17a2b8/ffffff?text=Facts+and+Truths" alt="Illustrative image for Zero Conditional" class="rounded-2xl shadow-md">
+                </div>
+            </div>
+        </div>
+
+        <!-- First Conditional Page -->
+        <div id="page-first" class="page bg-white p-6 md:p-10 rounded-3xl shadow-lg hidden">
+            <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-first mb-4">First Conditional 🚀 (Possible future situations)</h2>
+                    <p class="text-gray-700 mb-6">We use the first conditional to talk about possible future situations and their likely outcomes. The phrase expresses a condition and a probable consequence.</p>
+                    <h3 class="text-2xl font-bold text-first mb-4">Structure:</h3>
+                    <p class="text-xl font-mono p-4 bg-gray-100 rounded-lg mb-6">If + Present Simple, will/won't + base verb</p>
+                    <div id="examples-first" class="space-y-4">
+                        <p class="text-lg text-gray-800 opacity-0 transition-opacity duration-500">
+                            1. If you <span class="highlight">run</span> fast, you <span class="highlight">will win</span> the race. 🏃‍♂️
+                        </p>
+                        <p class="text-lg text-gray-800 opacity-0 transition-opacity duration-500">
+                            2. If it <span class="highlight">doesn't rain</span>, we <span class="highlight">will go</span> to the park. 🏞️
+                        </p>
+                        <p class="text-lg text-gray-800 opacity-0 transition-opacity duration-500">
+                            3. If you <span class="highlight">study</span> hard, you <span class="highlight">will pass</span> the exam. ✍️
+                        </p>
+                        <p class="text-lg text-gray-800 opacity-0 transition-opacity duration-500">
+                            4. If you <span class="highlight">feel</span> unwell, you <span class="highlight">won't play</span> in the final match. 🤒
+                        </p>
+                    </div>
+                    <button id="button-first" onclick="showNextExample('first')" class="mt-8 bg-first text-white font-semibold py-2 px-6 rounded-full shadow-md hover:bg-opacity-80 transition-all duration-300">
+                        Show Next Example
+                    </button>
+                </div>
+                <div class="md:w-1/2 flex justify-center items-center">
+                    <img src="https://placehold.co/400x300/d99000/ffffff?text=Future+Possibilities" alt="Illustrative image for First Conditional" class="rounded-2xl shadow-md">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second Conditional Page -->
+        <div id="page-second" class="page bg-white p-6 md:p-10 rounded-3xl shadow-lg hidden">
+            <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-second mb-4">Second Conditional 🔮 (Imaginary situations)</h2>
+                    <p class="text-gray-700 mb-6">We use the second conditional to talk about imaginary situations in the present or future, or about unlikely events. The situation is not real or is improbable.</p>
+                    <h3 class="text-2xl font-bold text-second mb-4">Structure:</h3>
+                    <p class="text-xl font-mono p-4 bg-gray-100 rounded-lg mb-6">If + Past Simple, would/could/might + base verb</p>
+                    <div id="examples-second" class="space-y-4">
+                        <p class="text-lg text-gray-800 opacity-0 transition-opacity duration-500">
+                            1. If I <span class="highlight">took</span> a first aid class, I <span class="highlight">would know</span> what to do. ⚕️
+                        </p>
+                        <p class="text-lg text-gray-800 opacity-0 transition-opacity duration-500">
+                            2. If I <span class="highlight">won</span> the lottery, I <span class="highlight">would buy</span> a big house. 💰
+                        </p>
+                        <p class="text-lg text-gray-800 opacity-0 transition-opacity duration-500">
+                            3. If I <span class="highlight">was</span> rich, I <span class="highlight">would buy</span> a new car. 🚗
+                        </p>
+                    </div>
+                    <button id="button-second" onclick="showNextExample('second')" class="mt-8 bg-second text-white font-semibold py-2 px-6 rounded-full shadow-md hover:bg-opacity-80 transition-all duration-300">
+                        Show Next Example
+                    </button>
+                </div>
+                <div class="md:w-1/2 flex justify-center items-center">
+                    <img src="https://placehold.co/400x300/8a2be2/ffffff?text=Imaginary+Situations" alt="Illustrative image for Second Conditional" class="rounded-2xl shadow-md">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let exampleIndex = {
+            zero: 0,
+            first: 0,
+            second: 0
+        };
+
+        let maxExamples = {
+            zero: 3,
+            first: 4,
+            second: 3
+        };
+
+        let exampleContainers = {
+            zero: document.getElementById('examples-zero'),
+            first: document.getElementById('examples-first'),
+            second: document.getElementById('examples-second')
+        };
+        
+        let navLinks = {
+            zero: document.getElementById('link-zero'),
+            first: document.getElementById('link-first'),
+            second: document.getElementById('link-second')
+        };
+
+        let pages = {
+            zero: document.getElementById('page-zero'),
+            first: document.getElementById('page-first'),
+            second: document.getElementById('page-second')
+        };
+
+        let pageBgColors = {
+            zero: 'bg-zero',
+            first: 'bg-first',
+            second: 'bg-second'
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage('zero');
+        });
+
+        function showNextExample(pageId) {
+            const examples = exampleContainers[pageId].children;
+            const button = document.getElementById('button-' + pageId);
+            
+            if (exampleIndex[pageId] < maxExamples[pageId]) {
+                examples[exampleIndex[pageId]].classList.remove('opacity-0');
+                exampleIndex[pageId]++;
+            }
+
+            if (exampleIndex[pageId] >= maxExamples[pageId]) {
+                button.classList.add('hidden');
+            }
+        }
+
+        function showPage(pageId) {
+            // Hide all pages and remove active link styles
+            for (const key in pages) {
+                pages[key].classList.add('hidden');
+                navLinks[key].classList.remove('active-link', 'border-' + key.replace('first', 'first').replace('second', 'second').replace('zero', 'zero'));
+                document.body.classList.remove(pageBgColors[key]);
+            }
+
+            // Show the selected page and set active link style
+            pages[pageId].classList.remove('hidden');
+            navLinks[pageId].classList.add('active-link', 'border-' + pageId.replace('first', 'first').replace('second', 'second').replace('zero', 'zero'));
+            document.body.classList.add(pageBgColors[pageId]);
+
+            // Reset examples and button
+            resetExamples(pageId);
+        }
+
+        function resetExamples(pageId) {
+            const examples = exampleContainers[pageId].children;
+            const button = document.getElementById('button-' + pageId);
+
+            for (const example of examples) {
+                example.classList.add('opacity-0');
+            }
+            exampleIndex[pageId] = 0;
+            button.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
