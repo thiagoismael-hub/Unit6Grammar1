@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals Explained</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff, #e0e7ff);
+        }
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .example-list li {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .example-list li.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4 text-gray-800">
+
+    <div class="w-full max-w-4xl p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-5xl font-bold text-blue-800">Conditional Grammar 🧠</h1>
+            <p class="mt-4 text-xl text-gray-600">Understand the difference between the Zero and First Conditional.</p>
+        </header>
+
+        <!-- Navigation Buttons -->
+        <nav class="flex justify-center space-x-4 mb-8">
+            <button id="zero-btn" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-transform duration-200 hover:scale-105 hover:bg-blue-700">
+                Zero Conditional
+            </button>
+            <button id="first-btn" class="bg-indigo-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-transform duration-200 hover:scale-105 hover:bg-indigo-700">
+                First Conditional
+            </button>
+        </nav>
+
+        <!-- Zero Conditional Page -->
+        <div id="zero-conditional-page" class="page-content active card">
+            <h2 class="text-3xl font-bold text-blue-700 flex items-center mb-4">
+                <span class="mr-2">Zero Conditional 🟢</span>
+                <span class="text-sm font-normal text-gray-500">(Facts and universal truths)</span>
+            </h2>
+            <p class="text-lg leading-relaxed">
+                We use the zero conditional to talk about scientific facts, habits, and things that are always true. The structure is simple and direct because the outcome is guaranteed.
+            </p>
+
+            <div class="mt-6 p-6 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+                <p class="text-xl font-semibold text-blue-700 mb-2">Structure:</p>
+                <p class="font-mono text-lg bg-blue-100 p-2 rounded-md">
+                    <span class="text-gray-600">If + Present Simple,</span> <span class="text-gray-600">Present Simple</span>
+                </p>
+            </div>
+
+            <div class="mt-8">
+                <h3 class="text-2xl font-bold text-blue-700 mb-2">Examples:</h3>
+                <ul id="zero-examples" class="example-list list-disc list-inside space-y-4 text-lg text-gray-600">
+                    <li data-index="0">
+                        If you <span class="font-bold text-blue-600">heat</span> ice, it <span class="font-bold text-blue-600">melts</span>. 🧊
+                    </li>
+                    <li data-index="1">
+                        If you <span class="font-bold text-blue-600">don't water</span> plants, they <span class="font-bold text-blue-600">die</span>. 🌿
+                    </li>
+                    <li data-index="2">
+                        If you <span class="font-bold text-blue-600">mix</span> blue and yellow, you <span class="font-bold text-blue-600">get</span> green. 🎨
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-8 text-center">
+                 <button id="zero-next-btn" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md transform transition-transform duration-200 hover:scale-105 hover:bg-blue-700">
+                    Show Next Example
+                </button>
+            </div>
+        </div>
+
+        <!-- First Conditional Page -->
+        <div id="first-conditional-page" class="page-content card">
+            <h2 class="text-3xl font-bold text-indigo-700 flex items-center mb-4">
+                <span class="mr-2">First Conditional 🚀</span>
+                <span class="text-sm font-normal text-gray-500">(Possible future situations)</span>
+            </h2>
+            <p class="text-lg leading-relaxed">
+                We use the first conditional to talk about possible future situations and their likely outcomes. The phrase expresses a condition and a probable consequence.
+            </p>
+
+            <div class="mt-6 p-6 bg-indigo-50 rounded-lg border-l-4 border-indigo-400">
+                <p class="text-xl font-semibold text-indigo-700 mb-2">Structure:</p>
+                <p class="font-mono text-lg bg-indigo-100 p-2 rounded-md">
+                    <span class="text-gray-600">If + Present Simple,</span> <span class="text-gray-600">will/won't + base verb</span>
+                </p>
+            </div>
+
+            <div class="mt-8">
+                <h3 class="text-2xl font-bold text-indigo-700 mb-2">Examples:</h3>
+                <ul id="first-examples" class="example-list list-disc list-inside space-y-4 text-lg text-gray-600">
+                    <li data-index="0">
+                        If you <span class="font-bold text-indigo-600">run</span> fast, you <span class="font-bold text-indigo-600">will win</span> the race. 🏃‍♂️
+                    </li>
+                    <li data-index="1">
+                        If it <span class="font-bold text-indigo-600">doesn't rain</span>, we <span class="font-bold text-indigo-600">will go</span> to the park. 🏞️
+                    </li>
+                    <li data-index="2">
+                        If you <span class="font-bold text-indigo-600">study</span> hard, you <span class="font-bold text-indigo-600">will pass</span> the exam. ✍️
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-8 text-center">
+                 <button id="first-next-btn" class="bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md transform transition-transform duration-200 hover:scale-105 hover:bg-indigo-700">
+                    Show Next Example
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const zeroBtn = document.getElementById('zero-btn');
+        const firstBtn = document.getElementById('first-btn');
+        const zeroPage = document.getElementById('zero-conditional-page');
+        const firstPage = document.getElementById('first-conditional-page');
+        const zeroNextBtn = document.getElementById('zero-next-btn');
+        const firstNextBtn = document.getElementById('first-next-btn');
+        const zeroExamples = document.querySelectorAll('#zero-examples li');
+        const firstExamples = document.querySelectorAll('#first-examples li');
+
+        let zeroIndex = -1;
+        let firstIndex = -1;
+
+        function showPage(pageToShow) {
+            const pages = [zeroPage, firstPage];
+            pages.forEach(page => {
+                if (page === pageToShow) {
+                    page.classList.add('active');
+                    if (page.id === 'zero-conditional-page') {
+                        // Reset zero conditional examples
+                        zeroIndex = -1;
+                        zeroExamples.forEach(li => li.classList.remove('show'));
+                        zeroNextBtn.style.display = 'inline-block';
+                    } else {
+                        // Reset first conditional examples
+                        firstIndex = -1;
+                        firstExamples.forEach(li => li.classList.remove('show'));
+                        firstNextBtn.style.display = 'inline-block';
+                    }
+                } else {
+                    page.classList.remove('active');
+                }
+            });
+        }
+
+        zeroBtn.addEventListener('click', () => showPage(zeroPage));
+        firstBtn.addEventListener('click', () => showPage(firstPage));
+
+        zeroNextBtn.addEventListener('click', () => {
+            zeroIndex++;
+            if (zeroIndex < zeroExamples.length) {
+                zeroExamples[zeroIndex].classList.add('show');
+            }
+            if (zeroIndex >= zeroExamples.length - 1) {
+                zeroNextBtn.style.display = 'none';
+            }
+        });
+
+        firstNextBtn.addEventListener('click', () => {
+            firstIndex++;
+            if (firstIndex < firstExamples.length) {
+                firstExamples[firstIndex].classList.add('show');
+            }
+            if (firstIndex >= firstExamples.length - 1) {
+                firstNextBtn.style.display = 'none';
+            }
+        });
+
+        // Initialize with Zero Conditional page active
+        showPage(zeroPage);
+    </script>
+</body>
+</html>
